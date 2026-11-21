@@ -9,6 +9,17 @@
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Orchard — Apple devices store</title>
+    <script>
+      if (!location.hash || location.hash === "#/") {
+        const banner = document.createElement("link");
+
+        banner.rel = "preload";
+        banner.as = "image";
+        banner.href = "%BASE_URL%img/products/iphone-18-pro/burgundy-0.webp";
+        banner.fetchPriority = "high";
+        document.head.append(banner);
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
