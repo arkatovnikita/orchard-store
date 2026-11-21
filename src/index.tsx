@@ -3,13 +3,15 @@ import { createRoot } from 'react-dom/client';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { App } from './App';
 import { HomePage } from './modules/HomePage';
-import { CatalogPage } from './modules/CatalogPage';
-import { ProductDetailsPage } from './modules/ProductDetailsPage';
-import { FavoritesPage } from './modules/FavoritesPage';
-import { CartPage } from './modules/CartPage';
-import { CheckoutPage } from './modules/CheckoutPage';
-import { SearchPage } from './modules/SearchPage';
-import { NotFoundPage } from './modules/NotFoundPage';
+import {
+  CartPage,
+  CatalogPage,
+  CheckoutPage,
+  FavoritesPage,
+  NotFoundPage,
+  ProductDetailsPage,
+  SearchPage,
+} from './pages';
 import { CartProvider } from './modules/shared/context/CartContext';
 import { FavoritesProvider } from './modules/shared/context/FavoritesContext';
 import { ThemeProvider } from './modules/shared/context/ThemeContext';

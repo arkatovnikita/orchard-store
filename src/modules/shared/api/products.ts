@@ -4,7 +4,9 @@ import { ProductDetails } from '../types/ProductDetails';
 
 const API_URL = `${import.meta.env.BASE_URL}api`;
 
-async function get<T>(fileName: string): Promise<T> {
+const cache = new Map<string, Promise<unknown>>();
+
+async function load<T>(fileName: string): Promise<T> {
   const response = await fetch(`${API_URL}/${fileName}`);
 
   if (!response.ok) {
@@ -12,6 +14,23 @@ async function get<T>(fileName: string): Promise<T> {
   }
 
   return response.json();
+}
+
+function get<T>(fileName: string): Promise<T> {
+  const cached = cache.get(fileName);
+
+  if (cached) {
+    return cached as Promise<T>;
+  }
+
+  const request = load<T>(fileName).catch(error => {
+    cache.delete(fileName);
+    throw error;
+  });
+
+  cache.set(fileName, request);
+
+  return request;
 }
 
 export const getProducts = () => get<Product[]>('products.json');
