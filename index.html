@@ -8,7 +8,36 @@
       content="Orchard — online store of the latest Apple devices: iPhone, iPad, Mac, Apple Watch and AirPods."
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Orchard" />
+    <meta property="og:title" content="Orchard — Apple devices store" />
+    <meta
+      property="og:description"
+      content="Portfolio e-commerce project: catalog with filters, search, cart and a 4-step demo checkout. Built with React and TypeScript."
+    />
+    <meta property="og:url" content="https://arkatovnikita.github.io/orchard-store/" />
+    <meta property="og:image" content="https://arkatovnikita.github.io/orchard-store/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Orchard store preview with iPhone, MacBook, Apple Watch and AirPods"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
     <title>Orchard — Apple devices store</title>
+    <script>
+      if (!location.hash || location.hash === "#/") {
+        const banner = document.createElement("link");
+
+        banner.rel = "preload";
+        banner.as = "image";
+        banner.href = "%BASE_URL%img/products/iphone-18-pro/burgundy-0.webp";
+        banner.fetchPriority = "high";
+        document.head.append(banner);
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

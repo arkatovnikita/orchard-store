@@ -146,6 +146,7 @@ export const PicturesSlider = ({ products }: Props) => {
                     src={`${import.meta.env.BASE_URL}${banner.image}`}
                     alt={banner.title}
                     className={styles.image}
+                    loading={index === 0 ? 'eager' : 'lazy'}
                   />
                 </div>
               );

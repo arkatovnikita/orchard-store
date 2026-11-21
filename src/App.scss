@@ -77,3 +77,7 @@ main {
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
+
+.page-fallback {
+  min-height: 100vh;
+}
