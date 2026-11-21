@@ -528,7 +528,7 @@
     ],
     "capacityLabel": "Storage",
     "year": 2023,
-    "image": "img/products/iphone-15-pro-max/naturaltitanium-0.webp",
+    "image": "img/products/iphone-15-pro/naturaltitanium-0.webp",
     "summary": "6.7\" OLED · A17 Pro",
     "colors": [
       {
@@ -615,7 +615,7 @@
     ],
     "capacityLabel": "Storage",
     "year": 2023,
-    "image": "img/products/iphone-15-plus/yellow-0.webp",
+    "image": "img/products/iphone-15/yellow-0.webp",
     "summary": "6.7\" OLED · A16",
     "colors": [
       {
@@ -710,7 +710,7 @@
     ],
     "capacityLabel": "Storage",
     "year": 2022,
-    "image": "img/products/iphone-14-pro-max/gold-0.webp",
+    "image": "img/products/iphone-14-pro/gold-0.webp",
     "summary": "6.7\" OLED · A16 Bionic",
     "colors": [
       {
@@ -797,7 +797,7 @@
     ],
     "capacityLabel": "Storage",
     "year": 2022,
-    "image": "img/products/iphone-14-plus/blue-0.webp",
+    "image": "img/products/iphone-14/blue-0.webp",
     "summary": "6.7\" OLED · A15 Bionic",
     "colors": [
       {
@@ -900,7 +900,7 @@
     ],
     "capacityLabel": "Storage",
     "year": 2021,
-    "image": "img/products/iphone-13-pro-max/alpinegreen-0.webp",
+    "image": "img/products/iphone-13-pro/alpinegreen-0.webp",
     "summary": "6.7\" OLED · A15 Bionic",
     "colors": [
       {
@@ -1242,7 +1242,7 @@
     ],
     "capacityLabel": "Storage",
     "year": 2025,
-    "image": "img/products/ipad-air-13-m3/spacegray-0.webp",
+    "image": "img/products/ipad-air-13/spacegray-0.webp",
     "summary": "13\" Liquid Retina · M3",
     "colors": [
       {
@@ -1286,7 +1286,7 @@
     ],
     "capacityLabel": "Storage",
     "year": 2025,
-    "image": "img/products/ipad-air-11-m3/starlight-0.webp",
+    "image": "img/products/ipad-air-11/starlight-0.webp",
     "summary": "11\" Liquid Retina · M3",
     "colors": [
       {
@@ -1373,7 +1373,7 @@
     ],
     "capacityLabel": "Storage",
     "year": 2024,
-    "image": "img/products/ipad-pro-13-m4/silver-0.webp",
+    "image": "img/products/ipad-pro-13/silver-0.webp",
     "summary": "13\" Ultra Retina XDR · M4",
     "colors": [
       {
@@ -1409,7 +1409,7 @@
     ],
     "capacityLabel": "Storage",
     "year": 2024,
-    "image": "img/products/ipad-pro-11-m4/silver-0.webp",
+    "image": "img/products/ipad-pro-11/silver-0.webp",
     "summary": "11\" Ultra Retina XDR · M4",
     "colors": [
       {
@@ -1606,7 +1606,7 @@
     ],
     "capacityLabel": "Storage",
     "year": 2022,
-    "image": "img/products/ipad-10/blue-0.webp",
+    "image": "img/products/ipad/blue-0.webp",
     "summary": "10.9\" Liquid Retina · A14",
     "colors": [
       {
@@ -1792,7 +1792,7 @@
     ],
     "capacityLabel": "Storage",
     "year": 2026,
-    "image": "img/products/macbook-pro-14/spaceblack-0.webp",
+    "image": "img/products/macbook-pro-14-m5-pro/spaceblack-0.webp",
     "summary": "14.2\" Liquid Retina XDR · M6 · 16GB",
     "colors": [
       {
@@ -1998,7 +1998,7 @@
     ],
     "capacityLabel": "Storage",
     "year": 2025,
-    "image": "img/products/macbook-air-15-m4/silver-0.webp",
+    "image": "img/products/macbook-air-15/silver-0.webp",
     "summary": "15.3\" Liquid Retina · M4 · 16GB",
     "colors": [
       {
@@ -2040,7 +2040,7 @@
     ],
     "capacityLabel": "Storage",
     "year": 2025,
-    "image": "img/products/macbook-air-13-m4/midnight-0.webp",
+    "image": "img/products/macbook-air-13/midnight-0.webp",
     "summary": "13.6\" Liquid Retina · M4 · 16GB",
     "colors": [
       {
@@ -2146,7 +2146,7 @@
     ],
     "capacityLabel": "Storage",
     "year": 2024,
-    "image": "img/products/macbook-pro-14-m4/spaceblack-0.webp",
+    "image": "img/products/macbook-pro-14-m5/spaceblack-0.webp",
     "summary": "14.2\" Liquid Retina XDR · M4 · 16GB",
     "colors": [
       {
@@ -2264,7 +2264,7 @@
     ],
     "capacityLabel": "Storage",
     "year": 2024,
-    "image": "img/products/imac-m4/silver-0.webp",
+    "image": "img/products/imac/silver-0.webp",
     "summary": "24\" 4.5K Retina · M4 · 16GB",
     "colors": [
       {
@@ -2484,7 +2484,7 @@
     ],
     "capacityLabel": "Storage",
     "year": 2023,
-    "image": "img/products/macbook-air-15-m2/midnight-0.webp",
+    "image": "img/products/macbook-air-15-m3/midnight-0.webp",
     "summary": "15.3\" Liquid Retina · M2 · 8GB",
     "colors": [
       {
@@ -2716,7 +2716,7 @@
     ],
     "capacityLabel": "Storage",
     "year": 2022,
-    "image": "img/products/mac-studio-m1-max/silver-0.webp",
+    "image": "img/products/mac-studio-m2-max/silver-0.webp",
     "summary": "M1 Max · 32GB · compact pro desktop",
     "colors": [
       {
@@ -3328,7 +3328,7 @@
     "capacityAvailable": [],
     "capacityLabel": "Storage",
     "year": 2024,
-    "image": "img/products/airpods-max-usb-c/midnight-0.webp",
+    "image": "img/products/airpods-max-2/midnight-0.webp",
     "summary": "Over-ear · H1 · Active Noise Cancellation",
     "colors": [
       {
