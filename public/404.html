@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Orchard</title>
+    <script>
+      const base = '/orchard-store/';
+      const path = location.pathname.slice(base.length);
+
+      location.replace(base + '#/' + path + location.search);
+    </script>
+  </head>
+  <body></body>
+</html>

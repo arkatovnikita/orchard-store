@@ -1,0 +1,25 @@
+import { Product } from '../modules/shared/types/Product';
+
+export const makeProduct = (overrides: Partial<Product> = {}): Product => ({
+  id: 1,
+  category: 'iphone',
+  itemId: 'iphone-18-256gb-black',
+  namespaceId: 'iphone-18',
+  name: 'iPhone 18 256GB Black',
+  modelName: 'iPhone 18',
+  fullPrice: 899,
+  price: 899,
+  color: 'black',
+  capacity: '256GB',
+  capacityAvailable: ['256GB', '512GB'],
+  capacityLabel: '256GB',
+  year: 2026,
+  image: 'img/products/iphone-18/black-0.webp',
+  summary: '',
+  colors: [],
+  rating: 4.5,
+  reviewsCount: 100,
+  inStock: true,
+  isNew: true,
+  ...overrides,
+});
