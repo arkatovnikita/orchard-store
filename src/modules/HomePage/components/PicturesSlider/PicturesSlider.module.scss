@@ -191,8 +191,11 @@
   right: 16px;
 }
 
-.main:hover .arrow,
 .arrow:focus-visible {
+  opacity: 1;
+}
+
+.main:hover .arrow {
   opacity: 1;
 }
 

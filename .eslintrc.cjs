@@ -10,15 +10,6 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
-    'plugin:cypress/recommended',
-  ],
-  overrides: [
-    {
-      'files': ['**/*.spec.jsx'],
-      'rules': {
-        'react/jsx-filename-extension': ['off'],
-      }
-    }
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -99,7 +90,7 @@ module.exports = {
       },
     ],
   },
-  ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.ts', 'src/vite-env.d.ts', 'cypress'],
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.ts', 'src/vite-env.d.ts'],
   settings: {
     react: {
       version: 'detect',
