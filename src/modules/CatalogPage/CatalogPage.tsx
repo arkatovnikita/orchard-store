@@ -23,6 +23,7 @@ import {
   getFilterCounts,
   getPriceRange,
 } from './utils/filters';
+import { sortProducts } from './utils/sort';
 
 const SORT_OPTIONS = [
   { value: 'age', label: 'Newest' },
@@ -41,28 +42,6 @@ const PER_PAGE_OPTIONS = [
 const FILTER_PARAMS = ['minPrice', 'maxPrice', 'sale', 'new'];
 
 type ParamValue = string | string[] | null;
-
-const sortProducts = (products: Product[], sort: string) => {
-  const sorted = [...products];
-
-  switch (sort) {
-    case 'price':
-      return sorted.sort((a, b) => a.price - b.price);
-
-    case 'price-desc':
-      return sorted.sort((a, b) => b.price - a.price);
-
-    case 'discount':
-      return sorted.sort(
-        (a, b) =>
-          (b.fullPrice - b.price) / b.fullPrice -
-          (a.fullPrice - a.price) / a.fullPrice,
-      );
-
-    default:
-      return sorted.sort((a, b) => b.year - a.year);
-  }
-};
 
 const parsePrice = (value: string | null) => {
   const price = Number(value);

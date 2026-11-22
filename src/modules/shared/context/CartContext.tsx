@@ -2,7 +2,13 @@ import { createContext, ReactNode, useContext, useMemo } from 'react';
 import { CartItem } from '../types/CartItem';
 import { Product } from '../types/Product';
 import { useLocalStorage } from '../hooks/useLocalStorage';
-import { PROMO_CODES } from '../constants/promoCodes';
+import {
+  addCartItem,
+  changeCartItemQuantity,
+  getCartTotals,
+  normalizePromoCode,
+  removeCartItem,
+} from '../utils/cart';
 
 type CartContextValue = {
   cartItems: CartItem[];
@@ -35,25 +41,15 @@ export const CartProvider = ({ children }: Props) => {
 
   const value = useMemo(() => {
     const addToCart = (product: Product) => {
-      setCartItems(items =>
-        items.some(item => item.id === product.itemId)
-          ? items
-          : [...items, { id: product.itemId, quantity: 1, product }],
-      );
+      setCartItems(items => addCartItem(items, product));
     };
 
     const removeFromCart = (id: string) => {
-      setCartItems(items => items.filter(item => item.id !== id));
+      setCartItems(items => removeCartItem(items, id));
     };
 
     const changeQuantity = (id: string, delta: number) => {
-      setCartItems(items =>
-        items.map(item =>
-          item.id === id
-            ? { ...item, quantity: Math.max(1, item.quantity + delta) }
-            : item,
-        ),
-      );
+      setCartItems(items => changeCartItemQuantity(items, id, delta));
     };
 
     const clearCart = () => {
@@ -62,9 +58,9 @@ export const CartProvider = ({ children }: Props) => {
     };
 
     const applyPromoCode = (code: string) => {
-      const normalizedCode = code.trim().toUpperCase();
+      const normalizedCode = normalizePromoCode(code);
 
-      if (!PROMO_CODES[normalizedCode]) {
+      if (!normalizedCode) {
         return false;
       }
 
@@ -79,19 +75,10 @@ export const CartProvider = ({ children }: Props) => {
 
     const isInCart = (id: string) => cartItems.some(item => item.id === id);
 
-    const totalQuantity = cartItems.reduce(
-      (sum, item) => sum + item.quantity,
-      0,
+    const { totalQuantity, totalPrice, discount, finalPrice } = getCartTotals(
+      cartItems,
+      promoCode,
     );
-
-    const totalPrice = cartItems.reduce(
-      (sum, item) => sum + item.quantity * item.product.price,
-      0,
-    );
-
-    const discountPercent = PROMO_CODES[promoCode] ?? 0;
-    const discount = Math.round((totalPrice * discountPercent) / 100);
-    const finalPrice = totalPrice - discount;
 
     return {
       cartItems,
