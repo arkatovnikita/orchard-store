@@ -6,6 +6,8 @@ This is a portfolio project. Orders and payments are a demo: nothing is charged 
 
 **[Live demo](https://arkatovnikita.github.io/orchard-store/)**
 
+[![CI](https://github.com/arkatovnikita/orchard-store/actions/workflows/ci.yml/badge.svg)](https://github.com/arkatovnikita/orchard-store/actions/workflows/ci.yml)
+
 <p>
   <img src="docs/screenshots/home.webp" alt="Home page" width="49%">
   <img src="docs/screenshots/product-dark.webp" alt="Product page in dark theme" width="49%">
@@ -61,6 +63,8 @@ Lighthouse, mobile, measured on the live site:
 - **Cart** — adding and removing items, quantities, totals and promo codes.
 
 Tests live next to the code they check, for example `validators.ts` and `validators.test.ts`. Run them with `npm test`.
+
+On every push, GitHub Actions installs the project and runs the linters, the tests and the build.
 
 ## Tech stack
 
