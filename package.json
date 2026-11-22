@@ -38,7 +38,8 @@
     "stylelint-scss": "^6.14.0",
     "typescript": "^5.2.2",
     "vite": "^5.3.1",
-    "vite-plugin-svgr": "^4.5.0"
+    "vite-plugin-svgr": "^4.5.0",
+    "vitest": "^2.1.9"
   },
   "scripts": {
     "start": "vite",
@@ -47,6 +48,8 @@
     "lint": "eslint src --ext .ts,.tsx && stylelint \"src/**/*.scss\"",
     "lint:fix": "eslint src --ext .ts,.tsx --fix && stylelint \"src/**/*.scss\" --fix",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist --nojekyll"
   }

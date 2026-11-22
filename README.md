@@ -51,12 +51,24 @@ Lighthouse, mobile, measured on the live site:
 - The first banner image is preloaded with high priority.
 - Skeletons keep the layout in place while data loads, so nothing jumps.
 
+## Testing
+
+119 unit tests with Vitest cover the logic where a mistake would cost the most:
+
+- **Checkout** — every field validator, Luhn check, Visa / Mastercard detection, phone and card formatting, typing and deleting in the expiry field, email typo suggestions.
+- **Catalog** — filters, the counts next to each filter option, sorting.
+- **Search** — matching several words in any order.
+- **Cart** — adding and removing items, quantities, totals and promo codes.
+
+Tests live next to the code they check, for example `validators.ts` and `validators.test.ts`. Run them with `npm test`.
+
 ## Tech stack
 
 - React 18 and TypeScript
 - React Router 6
 - SCSS modules
 - Vite
+- Vitest
 - ESLint (Airbnb), Prettier and Stylelint
 
 ## Routes
@@ -88,6 +100,7 @@ npm start
 | `npm start`       | Starts the dev server               |
 | `npm run build`   | Type-checks and builds the project  |
 | `npm run preview` | Serves the build locally            |
+| `npm test`        | Runs the tests                      |
 | `npm run lint`    | Runs ESLint and Stylelint           |
 | `npm run format`  | Formats the code with Prettier      |
 | `npm run deploy`  | Publishes the build to GitHub Pages |
@@ -102,6 +115,7 @@ src/
 ├── modules/                  # one folder per page
 │   ├── HomePage/             # banner slider, product sliders, categories, FAQ
 │   ├── CatalogPage/          # filters, mobile filter sheet, sorting, pagination
+│   │   └── utils/            # filter and sort logic
 │   ├── ProductDetailsPage/   # gallery, color and storage options, specs, reviews
 │   ├── SearchPage/           # full search results
 │   ├── CartPage/             # cart items and order summary
@@ -118,9 +132,10 @@ src/
 │       ├── hooks/            # useLocalStorage, useDebounce, useMediaQuery, useInView
 │       ├── constants/        # categories, navigation, promo codes
 │       ├── types/            # Product, CartItem, Review
-│       └── utils/            # product search
+│       └── utils/            # product search, cart totals
 ├── styles/                   # colors for both themes, sizes, mixins
-└── assets/                   # icons and images
+├── assets/                   # icons and images
+└── test/                     # helpers shared by tests
 public/
 ├── api/                      # catalog data: all products and one file per category
 ├── img/products/             # product photos in WebP
