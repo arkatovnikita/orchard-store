@@ -99,15 +99,14 @@ npm install
 npm start
 ```
 
-| Command           | What it does                        |
-| ----------------- | ----------------------------------- |
-| `npm start`       | Starts the dev server               |
-| `npm run build`   | Type-checks and builds the project  |
-| `npm run preview` | Serves the build locally            |
-| `npm test`        | Runs the tests                      |
-| `npm run lint`    | Runs ESLint and Stylelint           |
-| `npm run format`  | Formats the code with Prettier      |
-| `npm run deploy`  | Publishes the build to GitHub Pages |
+| Command           | What it does                       |
+| ----------------- | ---------------------------------- |
+| `npm start`       | Starts the dev server              |
+| `npm run build`   | Type-checks and builds the project |
+| `npm run preview` | Serves the build locally           |
+| `npm test`        | Runs the tests                     |
+| `npm run lint`    | Runs ESLint and Stylelint          |
+| `npm run format`  | Formats the code with Prettier     |
 
 ## Project structure
 
@@ -148,7 +147,7 @@ public/
 
 ## Deployment
 
-The site is hosted on GitHub Pages. `npm run deploy` builds the project and publishes the `dist` folder to the `gh-pages` branch.
+The site is hosted on GitHub Pages and deployed by GitHub Actions. Every push runs the linters, the tests and the build. When changes reach `master` and all checks pass, the build is published automatically.
 
 GitHub Pages serves only static files, so the app uses `HashRouter`: everything after `#` is handled in the browser. If a link is typed without `#`, for example `/orchard-store/iphone`, `public/404.html` redirects it to `/orchard-store/#/iphone`.
 
